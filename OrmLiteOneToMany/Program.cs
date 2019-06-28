@@ -25,6 +25,7 @@ namespace OrmLiteOneToMany
             //I need to populate ProductDto with a nested list of ebooks.  Not all books have ebooks
             // so I used a left join.  I understand that OrmLite has the [Reference] feature but it's not 
             // always possible to use it easily when working on large data set with lots of relationships
+            // and it won't work for many-to-many relationship when multiple joins are used
             var q = db.From<Book>()
                 .LeftJoin<Book, EBook>((b, e) => b.EanNumber == e.PhysicalBookEan);
 
