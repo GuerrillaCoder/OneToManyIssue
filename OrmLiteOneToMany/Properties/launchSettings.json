@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OrmLiteOneToMany": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

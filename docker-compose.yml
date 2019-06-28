@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: ormtest
+    ports:
+      - "5321:5432"
+    volumes:
+      - "test-data:/var/lib/postgresql/data"
+volumes:
+  test-data:
